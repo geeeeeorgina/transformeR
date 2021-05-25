@@ -85,7 +85,7 @@ fillGridDates <- function(grid, tz = "") {
   message("Time difference of ", day.step, " days")
   formato <- "%Y-%m-%d %H:%M:%S"
   if (day.step >= 1) formato <- "%Y-%m-%d"
-  tz <- attr(start[1], "tzone")
+  tz <- match.arg(tz)
   usetz <- TRUE
   if (is.null(tz)) {
     tz <- ""
